@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::apiResource('comment','CommentController');
 
-
-Route::middlware('auth:api')->group(function() {
-    Route::apiResource('comment','CommentController');
-});
+// Route::middleware('auth:api')->group(function() {
+    
+// });

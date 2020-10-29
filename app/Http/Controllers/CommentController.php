@@ -15,11 +15,12 @@ class CommentController extends Controller
      */
     public function index()
     {
-       //return Comment::orderByDesc('created_at')->get();
+       return Comment::orderByDesc('created_at')->get();
 
         //return $comments->toJson(JSON_PRETTY_PRINT);
 
-        return ResourcesComment::collection(Comment::orderByDesc('created_at')->get());
+        // return ResourcesComment::collection(Comment::orderByDesc('created_at')->get());
+
     }
 
     /**
